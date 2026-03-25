@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header class="yt-header">
+    <div class="header-left">
+      <button class="icon-btn menu-btn">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+          <rect width="18" height="2" fill="white"/>
+          <rect y="6" width="18" height="2" fill="white"/>
+          <rect y="12" width="18" height="2" fill="white"/>
+        </svg>
+      </button>
+      <a class="logo" href="#">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+            <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.8 5 12 5 12 5s-4.8 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.7 2.3.8C6.8 19 12 19 12 19s4.8 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.3 2.8-5.3 2.7z"/>
+          </svg>
+        </div>
+        <span class="logo-text">YouTube</span>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <div class="search-wrap">
+        <input class="search-input" type="text" id="searchInput" placeholder="Pesquisar" />
+        <button class="search-btn" id="searchBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+            <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="white" stroke-width="2" fill="none"/>
+          </svg>
+        </button>
+      </div>
+      <button class="icon-btn mic-btn" title="Pesquisar por voz">🎙️</button>
+    </div>
+
+    <div class="header-right">
+      <button class="create-btn">
+        <span class="create-icon">📹</span>
+        <span>+ Criar</span>
+      </button>
+      <div class="notif-wrap">
+        <button class="icon-btn">🔔</button>
+        <div class="notif-badge">9+</div>
+      </div>
+      <div class="avatar" title="Meu canal">V</div>
+    </div>
+  </header>
+
+  <div class="yt-body">
+
+
+    <nav class="yt-sidebar" id="sidebar">
+      <a class="sidebar-item active" href="#"><span class="s-icon">🏠</span><span>Início</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🧭</span><span>Explorar</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">📺</span><span>Shorts</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">▶️</span><span>Inscrições</span></a>
+      <hr class="sidebar-divider" />
+      <div class="sidebar-section">Você</div>
+      <a class="sidebar-item" href="#"><span class="s-icon">👤</span><span>Seu canal</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🕘</span><span>Histórico</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🎬</span><span>Seus vídeos</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">📋</span><span>Playlists</span></a>
+      <hr class="sidebar-divider" />
+      <div class="sidebar-section">Explorar</div>
+      <a class="sidebar-item" href="#"><span class="s-icon">🔥</span><span>Em alta</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🛒</span><span>Compras</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🎵</span><span>Música</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🎮</span><span>Jogos</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">📰</span><span>Notícias</span></a>
+      <hr class="sidebar-divider" />
+      <div class="sidebar-section">Mais do YouTube</div>
+      <a class="sidebar-item" href="#"><span class="s-icon">📡</span><span>YouTube Premium</span></a>
+      <a class="sidebar-item" href="#"><span class="s-icon">🎙️</span><span>YouTube Studio</span></a>
+    </nav>
+
+  
+    <main class="yt-main">
+
+  
+      <div class="player-area">
+
+        
+        <div class="video-player">
+          <div class="video-placeholder">
+            <div class="matrix-bg"></div>
+            <div class="terminal-text">
+            </div>
+          </div>
+        
+          <div class="video-controls">
+            <div class="progress-bar" id="progressBar">
+              <div class="progress-fill" id="progressFill">
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+            <div class="ctrl-row">
+              <button class="ctrl-btn" id="playBtn" title="Play/Pause">⏸</button>
+              <button class="ctrl-btn" title="Próximo">⏭</button>
+              <button class="ctrl-btn" id="muteBtn" title="Mudo">🔊</button>
+              <span class="time-display" id="timeDisplay">14:32 / 38:17</span>
+              <div class="ctrl-right">
+                <button class="ctrl-btn" title="Configurações">⚙️</button>
+                <button class="ctrl-btn" title="Miniplayer">📺</button>
+                <button class="ctrl-btn" id="fullscreenBtn" title="Tela cheia">⛶</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="video-info">
+          <h1 class="video-title">Embracing Failing</h1>
+
+          <div class="video-meta">
+            <div class="channel-row">
+              <div class="channel-avatar">P</div>
+              <div class="channel-details">
+                <div class="channel-name">The PrimeTime ✓</div>
+                <div class="channel-subs">1,08 mi de inscritos</div>
+              </div>
+              <button class="join-btn">Participe</button>
+              <button class="sub-btn" id="subBtn">Inscrever-se</button>
+            </div>
+
+            <div class="actions-row">
+              <button class="action-btn" id="likeBtn">
+                <span>👍</span>
+                <span id="likeCount">10 mil</span>
+                <span class="btn-divider"></span>
+                <span>👎</span>
+              </button>
+              <button class="action-btn">↗ Compartilhar</button>
+              <button class="action-btn">✦ Perguntar</button>
+              <button class="action-btn" id="saveBtn">🔖 Salvar</button>
+              <button class="action-btn">••• </button>
+            </div>
+          </div>
+          
+          <div class="description-box">
+            <div class="desc-stats">312.450 visualizações &nbsp;·&nbsp; há 3 dias</div>
+            <p>Hoje vamos falar sobre falhar, como isso é parte do processo de aprendizado e o 
+              que podemos tirar de lição disso. Linux, terminais e muito mais sobre a jornada de um desenvolvedor.</p>
+            <button class="show-more-btn" id="showMoreBtn">mostrar mais</button>
+          </div>
+        </div>
+      </div>
+
+        
+      <aside class="related-videos" id="relatedVideos">
+        
+      </aside>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
