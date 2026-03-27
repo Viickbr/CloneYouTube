@@ -691,3 +691,33 @@ opacity:1;
   background: #444;
   border-radius: 3px;
 }
+@media (max-width: 1024px) {
+  .yt-sidebar {
+    display: none;
+  }
+  .related-videos {
+    width: 300px;
+    min-width:300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .yt-main {
+    flex-direction: column;
+  }
+  .related-videos {
+    width: 100%;
+    min-width: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+.related-card {
+  flex-direction:column;
+}
+@media (max-width: 480px) {
+  .related-videos {
+    grid-template-columns: 1fr;
+  }
+}
